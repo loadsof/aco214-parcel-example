@@ -12,10 +12,10 @@ These instructions guide you through the initial Parcel setup. You only need to 
 ## Install the Parcel node module
 
 1. Open the terminal in VS Code by either
+
    - Open the command palette with _cmd-shift-P_ and begin typing **Terminal** until you can see and select the _View: Toggle Terminal_ command; or
    - Select _Terminal_ from the _View_ menu; or
    - Use the **ctrl-`** (control and backtick) keyboard shortcut
-
 
 2. In the terminal window type `npm install parcel-bundler` and wait for the package to download into your project folder
 
@@ -47,8 +47,8 @@ Open the `package.json` file. It should look something like this:
 You want to add two lines into the scripts section, above the test script which is already there:
 
 ```JSON
-"watch":"parcel watch index.html",
-"build":"parcel build index.html",
+"watch":"parcel watch ./src/index.html",
+"build":"parcel build ./src/index.html",
 ```
 
 After adding the new lines, your package.json file should look like this:
@@ -60,8 +60,8 @@ After adding the new lines, your package.json file should look like this:
   "description": "Example for setting up Parcel packager with a basic web project",
   "main": "index.js",
   "scripts": {
-    "watch": "parcel watch index.html",
-    "build": "parcel build index.html",
+    "watch": "parcel watch ./src/index.html",
+    "build": "parcel build ./src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -78,9 +78,9 @@ After adding the new lines, your package.json file should look like this:
 
 ### Adding JS and CSS files
 
-- Open `index.html`
+- Open `src/index.html`
 - In the <head> section, add a link to your css file:
-  - `<link rel="stylesheet" href="./src/css/index.css" />`
+  - `<link rel="stylesheet" href="./css/index.css" />`
 - Right before the closing </body> tag, add a link to your js file:
-  - `<script src="./src/js/index.js"></script>`
+  - `<script src="./js/index.js"></script>`
 - Save your index.html file
