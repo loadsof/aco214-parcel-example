@@ -1,2 +1,392 @@
 @import 'boxModelReset';
-@import '_colours'
+@import '_colours';
+
+
+
+
+  
+
+  ::selection {
+    background: #0168B3;
+    color: #fff;
+  }
+
+
+
+  body {
+    background-color: #F6EEE3;
+    color: #F6EEE3;
+    background-size: cover;
+    font-size: 16px;
+    font-family: 'gt-america-reg', Arial, Helvetica, sans-serif;
+  }
+
+  main {
+    padding:4%;
+  }
+
+
+/*
+  Global Header
+  */
+.site-name {
+  font-size: 2rem;
+  font-weight: normal;
+  color: #F6EEE3;
+}
+ .logo {
+   width: 100%;
+   margin-top: 8px;
+   font-family: 'garamond-book';
+   font-size: 3rem;
+   font-weight: normal;
+   font-style: normal;
+ }
+
+ .logo-box {
+ margin-bottom: 24px;
+
+ }
+
+ .site-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 64px;
+  ;
+
+ }
+
+ .basic-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-width: 0px;
+ }
+
+
+/*
+  Global Typography 
+  */
+
+@font-face {
+  font-family: 'garamond-book';
+  src: url('/fonts/garamond-book-narrow-c.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: 'gt-america-reg';
+  src: url('/fonts/gt-america-regular.woff') format('woff');
+  font-style: normal;
+}
+
+p {
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: normal;
+}
+
+.caption {
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-top: 8px;
+  text-align: right;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #000;
+  font-family: 'gt-america-reg', Georgia, 'Times New Roman', Times, serif;
+  font-weight: normal;
+  
+
+}
+
+h2 {
+font-size: 2rem;
+line-height: 2.2rem;
+font-weight: normal;
+color: #000;
+font-family: 'gt-america-reg', Georgia, 'Times New Roman', Times, serif;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  color: #000;
+  font-family: 'gt-america-reg', Georgia, 'Times New Roman', Times, serif;
+}
+
+.card-title {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+h4 {
+  font-size: 1rem;
+  color: #000;
+  font-family: 'gt-america-reg', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+h5 {
+  font-size: 20px;
+  font-family: 'gt-america-reg';
+  color: #777777;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/*
+  Nav 
+  */
+
+nav { 
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-family: 'gt-america-reg', Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid #000;
+}
+
+nav a {
+  color:#000;
+  transition: 0.4s;
+  margin-right: 32px;
+
+}
+
+nav a:hover {
+  color: #0168B3;
+}
+
+nav a:active {
+  color: #0168B3;
+}
+
+
+.header-nav {
+  margin-left: 40px;
+}
+
+
+
+  /*
+  Grid Things 
+  repeat( 2, 1fr);
+  */
+
+  
+    
+  .parent {
+    display: grid;
+    grid-template-columns: repeat( 2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+    font-family: 'gt-america-reg';
+    color: #000;
+  
+    }
+
+  /* About Grid */
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat( 2, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 24px;
+    line-height: 30px;
+    }
+    
+   
+
+
+
+      /*
+  Friend Card 
+  */
+        .friend-card {
+          background-color: #E5E5E5;
+          position: relative;
+          padding: 24px;
+          border-radius: 4px;
+          border: 1px solid #000;
+        }
+
+        .intro-text{
+      max-width: 450px;
+        }
+
+      iframe {
+        min-width: 240px;
+        width: 100%;
+      }
+
+      .circle-box {
+        border-radius: 100px;
+        width: 60px;
+        margin-left: 16px;
+      }
+
+        
+        .friend-img {
+          
+          max-width: 100%;
+          border-radius: 4px;
+        }
+
+        .weather-icon {
+          width: 50px;
+          margin-right: 8px;
+        }
+
+        .friend {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+          grid-gap: 24px;
+          position: relative;
+        }
+        
+        div {
+        
+          border-radius: 4px;
+        }
+
+        .geo2 { 
+          display: flex;
+          max-height: fit-content;
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+
+        .geo { 
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+          grid-gap: 8px;
+          position: relative;
+        }
+
+        .weather { 
+          display: flex;
+          max-height: fit-content;
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+
+
+        .geo-flex {
+          flex: 50%;
+          max-height: fit-content;
+          margin-bottom: 8px;
+          margin-bottom: 0px;
+        }
+
+        .row {
+          display: flex;
+          max-width: fit-content;
+        }
+
+  
+
+
+  
+
+/* Tooltip container */
+
+
+
+.tooltip {
+  
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-top: 8px;
+  align-content: flex-end;
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #0168B3; /* If you want dots under the hoverable text */
+}
+
+
+/* Tooltip text */
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 240px;
+  background-color: #0168B3;
+  color: #fff;
+  text-align: center;
+  padding: 24px;
+  border-radius: 4px;
+
+  /* Position the tooltip text */
+
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+  
+
+  
+/* Buttons and links */
+   
+    a.button3 {
+      display:inline-block;
+      padding:0.3em 1.2em;
+      margin:0 0.3em 0.3em 0;
+      border-radius:2em;
+      box-sizing: border-box;
+      text-decoration:none;
+      font-family:'gt-america-reg';
+      text-transform: capitalize;
+      font-weight:normal;
+      color:#000;
+      background-color:#f6eee2;
+      text-align:center;
+      transition: all 0.2s;
+      }
+      a.button3:hover{
+      background-color:#0168B3;
+      color: #fff;
+      }
+      @media all and (max-width:30em){
+       a.button3{
+      display:block;
+      margin:0.2em auto;
+      }
+      }
